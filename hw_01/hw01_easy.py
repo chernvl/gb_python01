@@ -11,8 +11,6 @@ __author__ = 'Черников Владимир'
 print('Задание 1:')
 number = input('Введите число: ')
 number = int(number)
-if number < 0:
-    number *= -1
 firstDigit = True
 while number > 0 or firstDigit:
     firstDigit = False
