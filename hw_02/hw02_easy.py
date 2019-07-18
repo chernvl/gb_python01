@@ -13,11 +13,16 @@
 
 # Подсказка: воспользоваться методом .format()
 print("Задание 1:")
-fruits = ["яблоко", "банан", "киви", "арбуз"]
+fruits = ["яблоко", "банан", "киви", "арбуз", "виноград"]
+maxLen = 0
+for fruit in fruits:
+    if len(fruit) > maxLen:
+        maxLen = len(fruit)
+
 i = 0
 while i < len(fruits):
-    text = "{0}. {1:>6}"
-    print(text.format(i, fruits[i]))
+    text = f"{i}. {fruits[i]:>{maxLen}}"
+    print(text)
     i += 1
 
 
