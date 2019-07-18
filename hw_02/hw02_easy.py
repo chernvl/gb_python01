@@ -13,20 +13,29 @@
 
 # Подсказка: воспользоваться методом .format()
 print("Задание 1:")
-fruits = ["яблоко", "банан", "киви", "арбуз"]
+fruits = ["яблоко", "банан", "киви", "арбуз", "виноград"]
+maxLen = 0
+for fruit in fruits:
+    if len(fruit) > maxLen:
+        maxLen = len(fruit)
+
 i = 0
 while i < len(fruits):
-    text = "{0}. {1:>6}"
-    print(text.format(i, fruits[i]))
+    text = f"{i}. {fruits[i]:>{maxLen}}"
+    print(text)
     i += 1
 
 
 # Задача-2:
 # Даны два произвольные списка.
 # Удалите из первого списка элементы, присутствующие во втором списке.
-print("Задание 2:")
-l1 = [1, 2, 3, 4]
-l2 = [2, 5, 1, 6]
+print("\nЗадание 2:")
+import random
+l1 = []
+l2 = []
+for i in range(0, 100):
+    l1.append(random.randint(-100, 100))
+    l2.append(random.randint(-100, 100))
 print("List 1:", l1)
 print("List 2:", l2)
 idx = 0
@@ -45,8 +54,11 @@ print("Resulted List:", l1)
 # Дан произвольный список из целых чисел.
 # Получите НОВЫЙ список из элементов исходного, выполнив следующие условия:
 # если элемент кратен двум, то разделить его на 4, если не кратен, то умножить на два.
-print("Задание 3:")
-l1 = [1, 2, 3, 4]
+print("\nЗадание 3:")
+import random
+l1 = []
+for i in range(0, 100):
+    l1.append(random.randint(-100, 100))
 print("List 1:", l1)
 idx = 0
 while idx < len(l1):
