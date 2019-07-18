@@ -46,7 +46,10 @@ print(my_filter(lambda x : x > 10, l1))
 
 def isParallelogram(A1, A2, A3, A4):
     retVal = False
-
+    diag_1_mid = ((A1[0] + A3[0]) / 2, (A1[1] + A3[1]) / 2)
+    diag_2_mid = ((A2[0] + A4[0]) / 2, (A2[1] + A4[1]) / 2)
+    if diag_1_mid == diag_2_mid:
+        retVal = True
     return retVal
 
 A1 = (1, 3)
